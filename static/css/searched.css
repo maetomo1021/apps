@@ -1,0 +1,170 @@
+body,h1,h2,h3,p,ul,ol{
+    margin: 0;
+    padding: 0;}
+  
+  body{
+      margin: 0 auto;
+      font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  }
+
+  .searched{
+    font-size: 32px;
+    border-left: solid #FF6E05 1.8vw;
+    padding-left: 1.8vw;
+    margin: 1.8vw 0 0 1.8vw;
+  }
+
+.orange_menu{
+    padding-bottom: 30px;
+}
+
+.center{
+    text-align: center;
+    align-items: center;
+}
+
+.searched_list{
+    display: flex;
+
+    justify-content: center;
+
+  /* 横並びに表示する */
+  flex-direction: row;
+
+  /* 画面幅に収まらない場合は折り返す */
+  flex-wrap: wrap;
+
+}
+
+.merchandise_box{
+    width: 300px;
+    height: auto;
+    background-color: #F8F8F8;
+    margin: 25px;
+    text-align: left;
+    padding: 30px;
+}
+
+.merchandise_box img{
+  margin-bottom: 30px;
+}
+
+.price{
+  color: #D32600;
+  font-size: 18px;
+}
+
+.small{
+  font-size: 15px;
+  padding-top: 10px;
+}
+
+.merchandise_name{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+
+
+.card-img{
+  border-radius: 20px;
+  margin-left: 20px;
+  background-color: #fff;
+  min-width: 125px;
+  min-height: 125px;
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list_img{
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 20px;
+}
+
+.card{
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-bottom: 25px;
+  background: rgb(201, 201, 201);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1400px;
+  height: 300px;
+  padding: 30px 20px;
+}
+
+.remarks{
+  background-color: #fff;
+  border-radius: 20px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  margin-left: 40px;
+}
+
+.remarks_btn{
+  margin: 0 0 0 1vw;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  border-radius: 20px;
+  background-color: #acdcff;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 10vw;
+  width: 25%;
+  position: absolute;
+  right: 15.5vw;
+  bottom: 0.5vw;
+  right: 0.5vw;
+  box-shadow: 0 4px 0 #9ac4e1;
+}
+
+.remarks_btn:hover {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.text_background_color{
+  padding: 10px 20px;
+  background-color: rgb(120, 120, 120);
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  margin: 10px 5px;
+  min-width: 120px;
+}
+
+.card-text{
+  padding: 5px 20px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.remarks p{
+  margin-top: 5px;
+}
+
+.remarks a{
+  margin-top: 5px;
+}
+
+.remarks div{
+  display: flex;
+  margin-top: 5px;
+}
+
+

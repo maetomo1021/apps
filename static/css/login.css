@@ -1,0 +1,71 @@
+body,h1,h2,h3,p,ul,ol{
+    margin: 0;
+    padding: 0;}
+a {
+    text-decoration:none;
+}
+  
+  body {
+      font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  }
+  
+  button {
+      /* 背景色を無色に */
+      background: transparent;
+      /* 枠線を消す */
+      border: none;
+      /* クリックした際に枠線をnone消す */
+      outline: none;
+      /* 影を消す */
+      box-shadow: none;
+    }
+
+
+
+
+
+
+
+
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin: 0;
+}
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.label_l {
+    display: block;
+    margin-top: 8px;
+}
+
+.input_l {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f7ca00;
+    color: #000;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+#login-form a p{
+    color: #01dcf9;
+    margin-top: 8px;
+}
