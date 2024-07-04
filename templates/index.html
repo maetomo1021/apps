@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レシートQRコード生成</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>レシートQRコード生成</h1>
+        <section>
+            <h2>店舗情報</h2>
+            <form id="store-form" method="post">
+                <input type="text" name="store_name" placeholder="店舗名" required value="{{ receipt.store_name }}">
+                <input type="date" name="date" required value="{{ receipt.date }}">
+                <button type="submit">店舗情報を設定</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>商品追加</h2>
+            <form id="item-form">
+                <div id="item-inputs">
+                    <div class="item-input">
+                        <input type="text" name="item_name[]" placeholder="商品名" required>
+                        <input type="number" name="item_quantity[]" placeholder="数量" required>
+                        <input type="number" name="item_price[]" placeholder="価格" step="0.01" required>
+                        <button type="button" class="remove-item-input" title="削除">×</button>
+                    </div>
+                </div>
+                <button type="button" id="add-item-input">＋ 商品を追加</button>
+                <button type="submit">商品を登録</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>商品リスト</h2>
+            <div id="item-list">
+                {% include 'item_list.html' %}
+            </div>
+        </section>
+
+        <section>
+            <h2>支払情報</h2>
+            <form id="payment-form">
+                <select name="payment_method" id="payment-method" required>
+                    <option value="">支払方法を選択</option>
+                    <option value="cash">現金</option>
+                    <option value="credit_card">クレジットカード</option>
+                    <option value="debit_card">デビットカード</option>
+                    <option value="electronic_money">電子マネー</option>
+                </select>
+                <div id="cash-payment" style="display: none;">
+                    <input type="number" name="paid_amount" id="paid-amount" placeholder="支払金額" step="1" min="0">
+                    <p id="change-amount">おつり: - 円</p>
+                </div>
+                <button type="submit">支払情報を設定</button>
+            </form>
+        </section>
+
+        <a href="{{ url_for('generate_qr') }}" target="_blank" class="qr-link">QRコードを生成</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

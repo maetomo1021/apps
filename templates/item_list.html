@@ -1,0 +1,34 @@
+{% if receipt.items %}
+<table class="item-table">
+    <thead>
+        <tr>
+            <th>商品名</th>
+            <th>価格</th>
+            <th>数量</th>
+            <th>小計</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for item in receipt.items %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }}円</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.price * item.quantity }}円</td>
+            <td>
+                <button class="delete-item" data-id="{{ loop.index0 }}" title="削除">×</button>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">合計</td>
+            <td colspan="2">{{ receipt.total() }}円</td>
+        </tr>
+    </tfoot>
+</table>
+{% else %}
+<p class="no-items">商品がありません。</p>
+{% endif %}
